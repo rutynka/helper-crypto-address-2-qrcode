@@ -38,11 +38,12 @@ If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommen
 
 ## Import as `Svelte Component` with bindings `this`
 
-<img width="820" src="public/qrcode_screenshot_hello_svelte.png" alt="screenshot">
+<img width="820" src="qrcode_screenshot_hello_svelte.png" alt="screenshot">
 
 ```bash
-npx degit sveltejs/template my-svelte-project
-cd my-svelte-project
+npx degit sveltejs/template svelte-typescript-app
+cd svelte-typescript-app
+node scripts/setupTypeScript.js
 yarn install
 yarn add @rutynka/helper-crypto-address-2-qrcode
 yarn dev
@@ -51,16 +52,16 @@ http://localhost:8080/
 
 ```js
 <script>
-	import Crypto from '@rutynka/helper-crypto-address-2-qrcode'
 	export let name;
 
-	const ltc = new cryptoqr({target:document.body})
+	import Crypto from '@rutynka/helper-crypto-address-2-qrcode'
+	const ltc = new Crypto({target:document.body})
 
 	ltc.set({
 		text:'For the litecoin MWEB addresses cannot check account balance',
 		show:true,
 		timer:5000,
-		icon:'./img/ltc.svg',
+		icon:'https://cdn.rutynka.io/img/icon/ltc.svg',
 		address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'
 	})
 </script>

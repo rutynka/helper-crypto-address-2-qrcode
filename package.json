@@ -1,7 +1,7 @@
 {
   "name": "@rutynka/helper-crypto-address-2-qrcode",
   "author": "ru7ynk4",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple Svelte app - crypto address 2 qrcode",
   "svelte": "src/index.js",
   "module": "dist/crypto.mjs",
