@@ -47,5 +47,12 @@
   },
   "homepage": "https://github.com/rutynka/helper-crypto-address-2-qrcode",
   "url": "https://rutynka.io",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rutynka/helper-crypto-address-2-qrcode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rutynka/helper-crypto-address-2-qrcode/issues"
+  }
 }
