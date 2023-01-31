@@ -1,7 +1,7 @@
 # A simple Svelte app - crypto address to qrcode
 
 <h1 align="center">
-    <a href="https://crypto-address-qrcode/">
+    <a href="https://helper-crypto-address-qrcode.vercel.app">
 	<img width="820" src="qrcode_crypto_screenshot.png" alt="screenshot">
 	</a>
 	<br>
@@ -10,7 +10,7 @@
 
 ## Stand-alone live demo on [Vercel](https://vercel.com)
 
-https://qrcode-crypto-address.vercel.app/
+https://helper-crypto-address-qrcode.vercel.app
 
 `bb.set({text:"NPM package with Bombay Engineer Group"},3)` in Web Inspector
 
@@ -38,7 +38,7 @@ If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommen
 
 ## Import as `Svelte Component` with bindings `this`
 
-<img width="820" src="public/bar_board_screenshot_hello_svelte.png" alt="screenshot">
+<img width="820" src="public/qrcode_screenshot_hello_svelte.png" alt="screenshot">
 
 ```bash
 npx degit sveltejs/template my-svelte-project
@@ -51,22 +51,23 @@ http://localhost:8080/
 
 ```js
 <script>
-	import BarManager from '@rutynka/helper-bar-board'
+	import Crypto from '@rutynka/helper-crypto-address-2-qrcode'
 	export let name;
 
-	let bb;
-	function handleClick() {
-		let id = bb.init({settings:{text:'init 🌭 + 🌭 =',color:80,}})
-		bb.set({text:'🌭🌭',color:110,},id)
-		console.log('click')
-	}
+	const ltc = new cryptoqr({target:document.body})
+
+	ltc.set({
+		text:'For the litecoin MWEB addresses cannot check account balance',
+		show:true,
+		timer:5000,
+		icon:'./img/ltc.svg',
+		address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'
+	})
 </script>
 
 <main>
-	<BarManager bind:this={bb}/>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<button on:click={handleClick}>Show bar</button>
 </main>
 ```
 
@@ -120,19 +121,4 @@ Then, from within your project folder:
 ```bash
 cd public
 vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
 ```
