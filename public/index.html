@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Svelte app</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel='stylesheet' href='/build/crypto.css'>
+
+	<script defer src='/build/crypto.js'></script>
+</head>
+<body>
+<script>
+	function test() {
+		const btc = new cryptoqr({target:document.body})
+		btc.set({address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+
+		const ltc = new cryptoqr({target:document.body})
+		const eth = new cryptoqr({target:document.body})
+		const bnb = new cryptoqr({target:document.body})
+		const ada = new cryptoqr({target:document.body})
+		const xmr = new cryptoqr({target:document.body})
+		const doge = new cryptoqr({target:document.body})
+		const xrp = new cryptoqr({target:document.body})
+		const sol = new cryptoqr({target:document.body})
+		const matic = new cryptoqr({target:document.body})
+		const trx = new cryptoqr({target:document.body})
+		const dot = new cryptoqr({target:document.body})
+
+
+		ltc.set({
+		text:'For the litecoin MWEB addresses cannot check account balance',
+		show:true,
+		timer:5000,
+		icon:'./img/ltc.svg',
+		address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'
+		})
+		eth.set({icon:'./img/eth.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+		bnb.set({icon:'./img/bnb.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+		ada.set({icon:'./img/ada.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+		xmr.set({icon:'./img/xmr.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+		doge.set({icon:'./img/doge.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+		xrp.set({icon:'./img/xrp.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+		sol.set({icon:'./img/sol.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+		matic.set({icon:'./img/matic.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+		trx.set({icon:'./img/trx.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+		dot.set({icon:'./img/dot.svg',address:'ltcmweb1qqdwjvnm8l62l5a47aayh7yj7pg6kynfhvw6ucpfwwuqwsx4efeaqzqmgpn6w0mdsc5n767caxd256zk23053vgyxxkjwrqfndjj6m9wwuuqse923'})
+
+		console.log('ready')
+	}
+
+	window.addEventListener('DOMContentLoaded', test)
+</script>
+</body>
+</html>

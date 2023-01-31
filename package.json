@@ -1,0 +1,51 @@
+{
+  "name": "@rutynka/helper-crypto-address-2-qrcode",
+  "author": "ru7ynk4",
+  "version": "0.1.0",
+  "description": "A simple Svelte app - crypto address 2 qrcode",
+  "svelte": "src/index.js",
+  "module": "dist/crypto.mjs",
+  "main": "dist/index.js",
+  "unpkg": "dist/crypto.js",
+  "type": "module",
+  "files": [
+    "src/index.js",
+    "src/Crypto.svelte"
+  ],
+  "keywords": [
+    "svelte",
+    "crypto",
+    "qrcode",
+    "address",
+    "litecoin",
+    "bitcoin"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --no-clear --port 5000",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-typescript": "^8.0.0",
+    "@tsconfig/svelte": "^2.0.1",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0",
+    "svelte-check": "^2.8.0",
+    "svelte-preprocess": "^4.10.7",
+    "tslib": "^2.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "sirv-cli": "^2.0.0"
+  },
+  "homepage": "https://github.com/rutynka/helper-crypto-address-2-qrcode",
+  "url": "https://rutynka.io",
+  "license": "MIT"
+}
